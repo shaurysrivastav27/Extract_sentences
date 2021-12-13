@@ -1,0 +1,5 @@
+### During the extraction of responsibilities from whole description we need to remove the sentences containing skill set for that job posting hence we need to define the required skill sets for the job posting.
+### For that purpose we need a skill dictionary.
+### Version 1 contains the code for making the skill dictionary using the skills columns from scrapped data.
+### Version 2  contains the code for making the skill dictionary using the skills columns from scrapped data as well but due to the presence of commonly used verbs in description text for skills it becomes hard to distinguish between responsibility and skill text.
+#### For e.g a particular job has skill set as SALES but sales being a verb in the use case might further remove the required sentence, hence we only define the skill set dictionary for those skill sets which have NNP Tags or Proper Noun tags. After POS tagging using NLTK library we take only those skills into account which are NNP hence removing many of the common verb words.
